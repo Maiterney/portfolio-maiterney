@@ -14,6 +14,8 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/i18n/language-context"
 
+import Image from "next/image"
+
 export function Projects() {
     const { t } = useLanguage()
 
@@ -38,8 +40,19 @@ export function Projects() {
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                     >
                         <Card className="flex flex-col h-full overflow-hidden border-muted-foreground/20 hover:border-primary/50 transition-colors">
-                            <div className="aspect-video bg-muted/50 flex items-center justify-center text-muted-foreground">
-                                Project Preview Image
+                            <div className="relative aspect-video bg-muted/50 overflow-hidden">
+                                {project.image ? (
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-transform hover:scale-105"
+                                    />
+                                ) : (
+                                    <div className="flex h-full w-full items-center justify-center text-muted-foreground">
+                                        Project Preview Image
+                                    </div>
+                                )}
                             </div>
                             <CardHeader>
                                 <CardTitle>{project.title}</CardTitle>
@@ -55,16 +68,20 @@ export function Projects() {
                                 </div>
                             </CardContent>
                             <CardFooter className="flex gap-4">
-                                <Button variant="outline" size="sm" asChild>
-                                    <Link href={project.github} target="_blank">
-                                        <Github className="mr-2 h-4 w-4" /> Code
-                                    </Link>
-                                </Button>
-                                <Button size="sm" asChild>
-                                    <Link href={project.demo} target="_blank">
-                                        <ExternalLink className="mr-2 h-4 w-4" /> {t.projects.viewProject}
-                                    </Link>
-                                </Button>
+                                {project.github && (
+                                    <Button variant="outline" size="sm" asChild>
+                                        <Link href={project.github} target="_blank">
+                                            <Github className="mr-2 h-4 w-4" /> Code
+                                        </Link>
+                                    </Button>
+                                )}
+                                {project.demo && (
+                                    <Button size="sm" asChild>
+                                        <Link href={project.demo} target="_blank">
+                                            <ExternalLink className="mr-2 h-4 w-4" /> {t.projects.viewProject}
+                                        </Link>
+                                    </Button>
+                                )}
                             </CardFooter>
                         </Card>
                     </motion.div>
