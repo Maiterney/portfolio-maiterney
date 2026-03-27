@@ -31,7 +31,7 @@ export function Header() {
         { name: t.nav.skills, href: "#skills" },
         { name: t.nav.projects, href: "#projects" },
         { name: t.nav.experience, href: "#experience" },
-        { name: t.nav.contact, href: "#contact" },
+        // { name: t.nav.contact, href: "#contact" },
     ]
 
     const [isOpen, setIsOpen] = React.useState(false)

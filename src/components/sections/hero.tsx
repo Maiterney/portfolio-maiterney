@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { ArrowRight, Download } from "lucide-react"
+import { Download, Github, Linkedin } from "lucide-react"
 import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
 
@@ -30,16 +30,26 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex gap-4"
+                className="flex flex-wrap justify-center gap-4"
             >
-                <Button asChild size="lg">
+                {/* <Button asChild size="lg">
                     <Link href="#contact">
                         {t.hero.contactBtn} <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
+                </Button> */}
+                <Button variant="outline" size="lg" asChild>
+                    <Link href="/assets/curriculo.pdf" target="_blank">
+                        {t.hero.downloadBtn} <Download className="ml-2 h-4 w-4" />
+                    </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                    <Link href="/resume.pdf" target="_blank">
-                        {t.hero.downloadBtn} <Download className="ml-2 h-4 w-4" />
+                    <Link href="https://www.linkedin.com/in/maiterney-vilela-15607214a" target="_blank" rel="noopener noreferrer">
+                        LinkedIn <Linkedin className="ml-2 h-4 w-4" />
+                    </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                    <Link href="https://github.com/Maiterney" target="_blank" rel="noopener noreferrer">
+                        GitHub <Github className="ml-2 h-4 w-4" />
                     </Link>
                 </Button>
             </motion.div>
