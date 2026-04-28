@@ -18,9 +18,15 @@ export function About() {
                 <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
                     {t.about.title}
                 </h2>
-                <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                    {t.about.description}
-                </p>
+                <div className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 flex flex-col gap-4 text-left">
+                    {Array.isArray(t.about.description) ? (
+                        t.about.description.map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))
+                    ) : (
+                        <p>{t.about.description}</p>
+                    )}
+                </div>
             </motion.div>
         </section>
     )

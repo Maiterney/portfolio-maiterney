@@ -15,7 +15,11 @@ export const pt = {
     },
     about: {
         title: "Sobre Mim",
-        description: "Sou um desenvolvedor apaixonado por criar interfaces de usuário intuitivas e dinâmicas. Com formação em ciência da computação e amor pelo design, eu uno estética e funcionalidade. Minha jornada na tecnologia é impulsionada pela curiosidade e pelo desejo de construir coisas que façam a diferença.",
+        description: [
+            "Sou desenvolvedor com mais de 5 anos de experiência na área de front-end, apaixonado por criar interfaces de usuário intuitivas e dinâmicas. Minha trajetória é marcada pela curiosidade e pelo desejo de construir produtos que façam a diferença, sempre unindo estética e funcionalidade.",
+            "Ao longo da carreira, já trabalhei com WordPress, PHP com Laravel e tive contato com Vue.js. Atualmente, minha stack é focada em React com Next.js, onde desenvolvo soluções modernas e escaláveis. Também já realizei trabalhos com Flutter, incluindo uma participação em uma startup financeira: entrei para auxiliar nas demandas do app em Flutter e, em pouco tempo, assumi a liderança do projeto, desenvolvendo o aplicativo do zero e contribuindo para outros apps da empresa.",
+            "Sou um profissional que busca constantemente evoluir, estudando em plataformas como Udemy e atualmente cursando o curso.dev, o que me mantém atualizado com as melhores práticas e tecnologias do mercado."
+        ],
     },
     skills: {
         title: "Habilidades",

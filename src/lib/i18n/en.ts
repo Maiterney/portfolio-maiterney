@@ -15,7 +15,11 @@ export const en = {
     },
     about: {
         title: "About Me",
-        description: "I am a passionate developer with a knack for creating intuitive and dynamic user interfaces. With a background in computer science and a love for design, I bridge the gap between aesthetics and functionality. My journey in tech has been driven by curiosity and a desire to build things that make a difference.",
+        description: [
+            "I am a developer with over 5 years of experience in front-end development, passionate about creating intuitive and dynamic user interfaces. My journey is marked by curiosity and the desire to build products that make a difference, always bridging the gap between aesthetics and functionality.",
+            "Throughout my career, I have worked with WordPress, PHP with Laravel, and had contact with Vue.js. Currently, my stack is focused on React with Next.js, where I develop modern and scalable solutions. I have also worked with Flutter, including a stint at a financial startup: I joined to assist with the Flutter app's demands, and in a short time, I assumed project leadership, developing the app from scratch and contributing to other company apps.",
+            "I am a professional who constantly seeks to evolve, studying on platforms like Udemy and currently taking curso.dev, which keeps me updated with the best practices and technologies in the market."
+        ],
     },
     skills: {
         title: "Skills",
