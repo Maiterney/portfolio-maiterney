@@ -54,6 +54,14 @@ export const en = {
                 github: "https://github.com/Maiterney/prova_jet",
                 demo: "",
             },
+            {
+                title: "Octogames",
+                description: "Platform for buying and selling digital products.",
+                image: "/assets/images/projects/octogames.png",
+                tags: ["React", "Next.js", "Tailwind CSS"],
+                github: "",
+                demo: "https://www.octogames.com.br/",
+            },
         ]
     },
     experience: {
